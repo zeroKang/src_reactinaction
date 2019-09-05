@@ -451,59 +451,390 @@
 
 //5.5
 
-import React, {Component} from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+// import React, {Component} from 'react';
+// import {StyleSheet, Text, View} from 'react-native';
+
+// export default class App extends Component {
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>A 50%</Example>
+//                     <Example>B 50%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>C 33%</Example>
+//                     <Example style={{flex: 2}}>D 66%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>E 25%</Example>
+//                     <Example style={{flex: 3}}>F 75%</Example>
+//                 </View>
+//             </View>
+//         );
+//     }
+// }
+
+// const Example = (props) => (
+//     <View style={[styles.example,styles.lightgrey,props.style]}>
+//         <Text>
+//             {props.children}
+//         </Text>
+//     </View>
+// );
+
+// const styles = StyleSheet.create({
+//     container: {
+//         marginTop: 50,
+//         alignItems: 'center',
+//         flex: 1
+//     },
+//     flexContainer: {
+//         width: 150,
+//         height: 150,
+//         borderWidth: 1,
+//         margin: 10
+//     },
+//     darkgrey: {
+//         backgroundColor: '#666666'
+//     },
+//     lightgrey: {
+//         backgroundColor: '#ededed'
+//     },
+//     example: {
+//         flex: 1,
+//         alignItems: 'center',
+//         justifyContent: 'center'
+//     },
+// });
+
+
+
+//5. 6
+
+// import React, {Component} from 'react';
+// import { StyleSheet, Text, View} from 'react-native';
+
+// export default class App extends Component {
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>A 50%</Example>
+//                     <Example>B 50%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>C 33%</Example>
+//                     <Example style={{flex: 2}}>D 66%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer]}>
+//                     <Example style={[styles.darkgrey]}>E 25%</Example>
+//                     <Example style={{flex: 3}}>F 75%</Example>
+//                 </View>
+//             </View>
+//         );
+//     }
+// }
+
+// const Example = (props) => (
+//     <View style={[styles.example,styles.lightgrey,props.style]}>
+//         <Text>
+//             {props.children}
+//         </Text>
+//     </View>
+// );
+
+// const styles = StyleSheet.create({
+//     container: {
+//         marginTop: 50,
+//         alignItems: 'center',
+//         flex: 1
+//     },
+//     flexContainer: {
+//         width: 150,
+//         height: 150,
+//         borderWidth: 1,
+//         margin: 10,
+//         flexDirection: 'row'
+//     },
+//     darkgrey: {
+//         backgroundColor: '#666666'
+//     },
+//     lightgrey: {
+//         backgroundColor: '#ededed'
+//     },
+//     example: {
+//         flex: 1,
+//         alignItems: 'center',
+//         justifyContent: 'center'
+//     },
+// });
+
+
+//5.7
+// import React, { Component } from 'react';
+// import { StyleSheet, Text, View} from 'react-native';
+
+// export default class App extends Component{
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <FlexContainer style={[{justifyContent: 'center'}]}>
+//                     <Example>center</Example>
+//                     <Example>center</Example>
+//                 </FlexContainer>
+//                 <FlexContainer style={[{justifyContent: 'flex-start'}]}>
+//                     <Example>flex-start</Example>
+//                     <Example>flex-start</Example>
+//                 </FlexContainer>
+//                 <FlexContainer style={[{justifyContent: 'flex-end'}]}>
+//                     <Example>flex-end</Example>
+//                     <Example>flex-end</Example>
+//                 </FlexContainer>
+//                 <FlexContainer style={[{justifyContent: 'space-around'}]}>
+//                     <Example>space-around</Example>
+//                     <Example>space-around</Example>
+//                 </FlexContainer>
+//                 <FlexContainer style={[{justifyContent: 'space-between'}]}>
+//                     <Example>space-between</Example>
+//                     <Example>space-between</Example>
+//                 </FlexContainer>
+//             </View>
+//         );
+//     }
+// }
+
+// const FlexContainer = (props) => (
+//     <View style={[styles.flexContainer,props.style]}>
+//         {props.children}
+//     </View>
+// );
+
+// const Example = (props) => (
+//     <View style={[styles.example,props.style]}>
+//         <Text>
+//             {props.children}
+//         </Text>
+//     </View>
+// );
+
+// const styles = StyleSheet.create({
+//     container: {
+//         marginTop: 50,
+//         alignItems: 'center',
+//         flex: 1
+//     },
+//     flexContainer: {
+//         alignItems: 'stretch',
+//         backgroundColor: '#ededed',
+//         width: 120,
+//         height: 100,
+//         borderWidth: 1,
+//         margin: 10
+//     },
+//     example: {
+//         width: 120,
+//         height: 15,
+//         backgroundColor: '#666666'
+//     },
+// });
+
+
+//5.8
+// import React, { Component } from 'react';
+// import { StyleSheet, Text, View} from 'react-native';
+
+// export default class App extends Component {
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <View style={[styles.flexContainer,{alignItems: 'center'}]}>
+//                     <Example style={[styles.darkgrey]}>A 50%</Example>
+//                     <Example>B 50%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer,{alignItems: 'flex-start'}]}>
+//                     <Example style={[styles.darkgrey]}>C 33%</Example>
+//                     <Example style={{flex: 2}}>D 66%</Example>
+//                 </View>
+//                 <View style={[styles.flexContainer,{alignItems: 'flex-end'}]}>
+//                     <Example style={[styles.darkgrey]}>E 25%</Example>
+//                     <Example style={{flex: 3}}>F 75%</Example>
+//                 </View>
+//             </View>
+//         );
+//     }
+// }
+
+// const Example = (props) => (
+//     <View style={[styles.example,styles.lightgrey,props.style]}>
+//         <Text>
+//             {props.children}
+//         </Text>
+//     </View>
+// );
+
+// const styles = StyleSheet.create({
+//     container: {
+//         marginTop: 50,
+//         alignItems: 'center',
+//         flex: 1
+//     },
+//     flexContainer: {
+//         width: 150,
+//         height: 150,
+//         borderWidth: 1,
+//         margin: 10
+//     },
+//     darkgrey: {
+//         backgroundColor: '#666666'
+//     },
+//     lightgrey: {
+//         backgroundColor: '#ededed'
+//     },
+//     example: {
+//         flex: 1,
+//         alignItems: 'center',
+//         justifyContent: 'center'
+//     },
+// });
+
+//5.9
+// import React, { Component } from 'react';
+// import { StyleSheet, Text, View} from 'react-native';
+
+// export default class App extends Component {
+//     render() {
+//         return (
+//             <View style={styles.container}>
+//                 <FlexContainer style={[]}>
+//                     <Example align='auto'>auto</Example>
+//                     <Example align='stretch'>stretch</Example>
+//                     <Example align='center'>center</Example>
+//                     <Example align='flex-start'>flex-start</Example>
+//                     <Example align='flex-end'>flex-end</Example>
+//                     <Example>default</Example>
+//                 </FlexContainer>
+//             </View>
+//         );
+//     }
+// }
+
+// const FlexContainer = (props) => (
+//     <View style={[styles.flexContainer,props.style]}>
+//         {props.children}
+//     </View>
+// );
+
+// const Example = (props) => (
+//     <View style={[styles.example,
+//                   styles.lightgrey,
+//                   {alignSelf: props.align || 'auto'},
+//                   props.style
+//     ]}>
+//         <Text>
+//             {props.children}
+//         </Text>
+//     </View>
+// );
+
+// const styles = StyleSheet.create({
+//     container: {
+//         marginTop: 50,
+//         alignItems: 'center',
+//         flex: 1
+//     },
+//     flexContainer: {
+//         backgroundColor: '#ededed',
+//         width: 120,
+//         height: 180,
+//         borderWidth: 1,
+//         margin: 10
+//     },
+//     example: {
+//         height: 25,
+//         marginBottom: 5,
+//         backgroundColor: '#666666'
+//     },
+// });
+
+
+//5.10
+import React, { Component } from 'react';
+import { StyleSheet, Text, View} from 'react-native';
 
 export default class App extends Component {
-    render() {
-        return (
-            <View style={styles.container}>
-                <View style={[styles.flexContainer]}>
-                    <Example style={[styles.darkgrey]}>A 50%</Example>
-                    <Example>B 50%</Example>
-                </View>
-                <View style={[styles.flexContainer]}>
-                    <Example style={[styles.darkgrey]}>C 33%</Example>
-                    <Example style={{flex: 2}}>D 66%</Example>
-                </View>
-                <View style={[styles.flexContainer]}>
-                    <Example style={[styles.darkgrey]}>E 25%</Example>
-                    <Example style={{flex: 3}}>F 75%</Example>
-                </View>
-            </View>
-        );
-    }
+  render() {
+    return (
+      <View style={styles.container}>
+        {/* flexWrap 속성 값에 nowrap으로 지정. 정사각형이 벗어남 */}
+        <NoWrapContainer>
+          <Example>A nowrap</Example>
+          <Example>1</Example>
+          <Example>2</Example>
+          <Example>3</Example>
+          <Example>4</Example>
+        </NoWrapContainer>
+        {/* flexWrap 속성 값에 wrap으로 지정. 정사각형이 유지되어 새로운 줄에서 시작 */}
+        <WrapContainer>
+          <Example>B wrap</Example>
+          <Example>1</Example>
+          <Example>2</Example>
+          <Example>3</Example>
+          <Example>4</Example>
+        </WrapContainer>
+      </View>
+    );
+  }
 }
 
+//첫 번째 예에 noWrapContainer 스타일을 적용
+const NoWrapContainer = (props) => (
+  <View style={[styles.noWrapContainer,props.style]}>
+    {props.children}
+  </View>
+);
+
+// 두 번째 예에 wrapContainer 스타일을 적용
+const WrapContainer = (props) => (
+  <View style={[styles.wrapContainer,props.style]}>
+    {props.children}
+  </View>
+);
+
 const Example = (props) => (
-    <View style={[styles.example,styles.lightgrey,props.style]}>
-        <Text>
-            {props.children}
-        </Text>
-    </View>
+  <View style={[styles.example,props.style]}>
+    <Text>
+      {props.children}
+    </Text>
+  </View>
 );
 
 const styles = StyleSheet.create({
-    container: {
-        marginTop: 50,
-        alignItems: 'center',
-        flex: 1
-    },
-    flexContainer: {
-        width: 150,
-        height: 150,
-        borderWidth: 1,
-        margin: 10
-    },
-    darkgrey: {
-        backgroundColor: '#666666'
-    },
-    lightgrey: {
-        backgroundColor: '#ededed'
-    },
-    example: {
-        flex: 1,
-        alignItems: 'center',
-        justifyContent: 'center'
-    },
+  container: {
+    marginTop: 150,
+    flex: 1
+  },
+  //flexDirection 속성에는 row, flexWrap 속성에는 nowrap을 지정
+  noWrapContainer: {
+    backgroundColor: '#ededed',
+    flexDirection: 'row',
+    flexWrap: 'nowrap',
+    borderWidth: 1,
+    margin: 10
+  },
+  
+  //flexDirection 속성에는 row, flexWrap 속성에는 wrap을 지정
+  wrapContainer: {
+    backgroundColor: '#ededed',
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    borderWidth: 1,
+    margin: 10
+  },
+  example: {
+    width: 100,
+    height: 100,
+    margin: 5,
+    backgroundColor: '#666666'
+  },
 });
