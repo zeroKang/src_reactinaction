@@ -7,6 +7,7 @@
     "test": "jest"
   },
   "dependencies": {
+    "immutability-helper": "^3.0.1",
     "react": "16.8.6",
     "react-native": "0.60.5"
   },
