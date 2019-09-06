@@ -8,6 +8,8 @@
   },
   "dependencies": {
     "@react-native-community/async-storage": "^1.6.1",
+    "@react-native-community/geolocation": "^2.0.2",
+    "@react-native-community/netinfo": "^4.2.0",
     "react": "16.8.6",
     "react-native": "0.60.5"
   },
