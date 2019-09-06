@@ -20,6 +20,11 @@ const Menu = ({onPress }) => {
       <View style={button} >
           <Button onPress={() => onPress('ViewPager')} title='ViewPager Android' />
       </View>
+      {/* 11.10   */}
+      <View style={button} >
+        <Button onPress={() => onPress('DatePicker')} title='DatePicker Android' />
+      </View>
+
     </View>
   )
 }
